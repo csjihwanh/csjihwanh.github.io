@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jihwan Hong</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header, nav, main, footer {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #0073e6;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        .content-with-media {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .content-with-media img {
+            width: 150px;
+            height: auto;
+            margin-right: 20px;
+        }
+        .award-item {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+        .award-item div {
+            max-width: 80%;
+        }
+        .award-item .date {
+            font-style: italic;
+            white-space: nowrap;
+        }
+        .award-title {
+            font-weight: bold;
+        }
+        footer {
+            text-align: center;
+            font-size: 0.8em;
+            color: #666;
+        }
+        .profile-image {
+            width: 300px;
+            height: auto;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jihwan Hong</h1>
+        <img src="assets/profile/hollywood.jpeg" alt="Jihwan Hong" class="profile-image">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#Patents">Patents</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>I am a student researching computer vision and machine learning at <a href="https://www.korea.ac.kr">Korea University</a>, in the Computer Science and Engineering department.</p>
+            <p>I am interested in computer vision, especially pose estimation, action recognition, zero-shot object detection and segmentation.</p>
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>B.A. in Computer Science and Engineering, Korea University (2019-Present)</li>
+            </ul>
+        </section>
+        <section id="research">
+            <h2>Research Experiences</h2>
+            <ul>
+                <li>Research Intern at <a href="http://ai.korea.ac.kr/">Artificial Intelligence Laboratory</a>, Korea University, Korea (Oct. 2020 - Jan. 2021)</li>
+                <li>Research Intern at <a href="http://mlv.korea.ac.kr/">Machine Learning & Vision Lab</a>, Korea University, Korea (Jun. 2023 - Present)</li>
+            </ul>
+        </section>
+        <section id="awards" class="awards-section">
+            <h2>Awards & Honors</h2>
+            
+            <div class="content-with-media">
+                <img src="assets/awards/vf-vars.png" alt="vf-vars_img">
+                <div class="award-item">
+                    <div>
+                        <p class="award-title">2nd Place, CVPR 2024 SoccerNet Challenge Multi-View Foul Recognition 2024</p>
+                        <p>CVPR 2024 CVsports workshop</p>
+                        <p><i>VF-VARS: Leveraging Video Foundation Models for Video Assistant Referee
+                            Systems</i></p>
+                        <p><a href="https://github.com/csjihwanh/SoccerNet-MLV">GitHub Repository</a></p>
+                    </div>
+                    <div class="date">2024</div>
+                </div>
+            </div>
+
+            <div class="content-with-media">
+                <img src="assets/awards/2023mech.gif" alt="Award Image">
+                <div class="award-item">
+                    <div>
+                        <p class="award-title">1st Place, The 14th KSME Student Creative Design Competition(제14회 전국학생설계경진대회)</p>
+                        <p>The Korean Society of Mechanical Engineers(대한기계학회)</p>
+                        <p>Minister of Science and ICT of Government of South Korea(과학기술정보통신부 장관상)</p>
+                        <p><i>Development of an AI-Based Automatic Seat Belt Adjustment Device</i></p>
+                        <p><a href="https://github.com/csjihwanh/2023mech">GitHub Repository</a></p>
+                    </div>
+                    <div class="date">2023</div>
+                </div>
+            </div>
+            
+            <div class="content-with-media">
+                <img src="assets/etc/transparent.png" alt="Award Image">
+                <div class="award-item">
+                    <div>
+                        <p class="award-title">4위(정보통신산업진흥원 원장상), 2021년 군장병 공개 소프트웨어 코딩 경진대회</p>
+                    </div>
+                    <div class="date">2021</div>
+                </div>
+            </div>
+            <div class="content-with-media">
+                <img src="assets/etc/transparent.png" alt="Award Image">
+                <div class="award-item">
+                    <div>
+                        <p class="award-title">동상, 고려대학교 공학교육혁신센터 2020 창의적 종합설계 경진대회</p>
+                        <p><i>블랙박스 신고 시스템</i></p>
+                    </div>
+                    <div class="date">2020</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="Publications">
+            <h2>Publications</h2>
+            <ul>
+            </ul>
+        </section>
+
+        <section id="Patents">
+            <h2>Patents</h2>
+            <ul>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li>Email: csjihwanh@gmail.com</li>
+                <li>Email: csjihwanh@korea.ac.kr</li>
+                <li>Phone: (+82) 10-8962-0556</li>
+                <li>Blog: https://jordano-jackson.tistory.com/</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jihwan Hong. All rights reserved.</p>
+    </footer>
+</body>
+</html>
