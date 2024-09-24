@@ -65,6 +65,23 @@
         .award-title {
             font-weight: bold;
         }
+
+        .publication-item {
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+        }
+        .publication-item div {
+            max-width: 80%;
+        }
+        .publication-item .date {
+            font-style: italic;
+            white-space: nowrap;
+        }
+        .publication-title {
+            font-weight: bold;
+        }
+
         footer {
             text-align: center;
             font-size: 0.8em;
@@ -178,9 +195,17 @@
 
         <section id="publications">
             <h2>Publications</h2>
-            <ul>
-                <li>To be added</li>
-            </ul>
+            
+                <div class="content-with-media">
+                    <img src="assets/publications/soccernet_abstract.png" alt="Publication Image">
+                    <div class="publication-item">
+                        <div>
+                            <p class="publication-title"><a href="https://arxiv.org/abs/2409.10587">SoccerNet 2024 Challenges Results</a></p>
+                            <p><i>arXiv preprint</i>, arXiv:2409.10587, 2024.</p> 
+                        </div>
+                        <div class="date">2024</div>
+                    </div>
+                </div>
         </section>
 
         <section id="patents">
@@ -217,7 +242,6 @@
             <ul>
                 <li>Email: csjihwanh at gmail.com</li>
                 <li>Email: csjihwanh at korea.ac.kr</li>
-                <li>Phone: (+82) 10-8962-0556</li>
                 <li>Blog: https://jordano-jackson.tistory.com/</li>
             </ul>
         </section>
