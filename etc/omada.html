@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OMaDA — Omni-Modal Model</title>
+
+    <meta name="description" content="OMaDA — omni-modal foundation model (placeholder launch page)." />
+    <meta name="theme-color" content="#0f0f70" />
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="./omada.css" />
+    <script>
+      window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+        svg: { fontCache: 'global' }
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+    <script defer src="./omada.js"></script>
+  </head>
+
+  <body>
+    <!-- Sticky top nav (simple, Seed-like, but not identical) -->
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="#top" aria-label="OMaDA Home">
+          <span class="brand__dot" aria-hidden="true"></span>
+          <span class="brand__text">OMaDA</span>
+        </a>
+
+        <button
+          class="nav__toggle"
+          id="navToggle"
+          type="button"
+          aria-controls="navMenu"
+          aria-expanded="false"
+        >
+          Menu
+        </button>
+
+        <div class="nav__links" id="navMenu">
+          <a href="#overview">Overview</a>
+          <a href="#methods">Methods</a>
+          <a href="#results">Results</a>
+          <a href="https://aidas.snu.ac.kr" target="_blank" rel="noopener noreferrer">AIDAS Lab</a>
+        </div>
+
+      </nav>
+    </header>
+
+    <main id="top">
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero__inner">
+          <div class="hero__meta">Feb 17, 2026</div>
+
+          <h1 class="hero__title">VIRST Preview</h1>
+
+          <p class="hero__subtitle">
+            We propose VIRST (Video-Instructed Reasoning assistant for Spatio-Temporal Segmentation), an end-to-end framework that unifies global video reasoning and pixel-level mask prediction within a single model.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="https://arxiv.org/abs/2509.22820" target="_blank" rel="noopener noreferrer">Read Paper</a>
+            <a class="btn btn--secondary" href="https://openreview.net/forum?id=2Gc8aj0afg" target="_blank" rel="noopener noreferrer">Try Now</a>
+          </div>
+
+          <!-- Video placeholder -->
+          <a class="video" href="#" aria-label="Play intro video (placeholder)">
+            <div class="video__frame" role="img" aria-label="Video placeholder">
+              <div class="video__play" aria-hidden="true">
+                <span class="video__triangle"></span>
+              </div>
+
+              <div class="video__text">
+                <div class="video__title">OMaDA</div>
+                <div class="video__desc">Intro video placeholder</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section id="overview" class="section">
+        <div class="container">
+          <h2 class="section__title">Overview</h2>
+
+          <div class="prose">
+            <p>
+              Referring Video Object Segmentation (RVOS) aims to segment target objects in videos based on natural language descriptions. However, CLIP-based and keyframe-based approaches that couple a vision-language model with a separate propagation module often fail to capture rapidly changing spatiotemporal dynamics, and to handle queries that require multi-step reasoning, which leads to sharp performance drops on motion-intensive and reasoning-oriented videos beyond static RVOS benchmarks. To address these limitations, we propose VIRST (Video-Instructed Reasoning assistant for Spatio-Temporal Segmentation), an end-to-end framework that unifies global video reasoning and pixel-level mask prediction within a single model. VIRST bridges semantic and segmentation representations through the Spatio-Temporal Fusion (STF), which fuses segmentation-aware video features into the vision-language backbone, and employs the Temporal Dynamic Anchor Updater (TDAU) to maintain dynamically updated anchor frames that provide stable temporal cues under large motion, occlusion, and reappearance. This unified design achieves state-of-the-art results across diverse RVOS benchmarks under realistic and challenging conditions, demonstrating strong generalization to both referring and reasoning-oriented settings.
+            </p>
+            <p>
+              Referring Video Object Segmentation (RVOS) aims to segment target objects in videos based on natural language descriptions. However, CLIP-based and keyframe-based approaches that couple a vision-language model with a separate propagation module often fail to capture rapidly changing spatiotemporal dynamics, and to handle queries that require multi-step reasoning, which leads to sharp performance drops on motion-intensive and reasoning-oriented videos beyond static RVOS benchmarks. To address these limitations, we propose VIRST (Video-Instructed Reasoning assistant for Spatio-Temporal Segmentation), an end-to-end framework that unifies global video reasoning and pixel-level mask prediction within a single model. VIRST bridges semantic and segmentation representations through the Spatio-Temporal Fusion (STF), which fuses segmentation-aware video features into the vision-language backbone, and employs the Temporal Dynamic Anchor Updater (TDAU) to maintain dynamically updated anchor frames that provide stable temporal cues under large motion, occlusion, and reappearance. This unified design achieves state-of-the-art results across diverse RVOS benchmarks under realistic and challenging conditions, demonstrating strong generalization to both referring and reasoning-oriented settings.
+            </p>
+          </div>
+
+          <figure class="figure">
+            <img class="figure__img" src="./main_result.png" alt="Main result figure" />
+            <figcaption class="figure__cap">
+              <span class="cap__label">Figure 1.</span> Caption placeholder for your main figure.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- METHODS -->
+      <section id="methods" class="section section--alt">
+        <div class="container">
+          <h2 class="section__title">Method</h2>
+          <p class="section__lead">
+            We present VIRST, a unified framework for referring video object segmentation with global spatio-temporal reasoning and fine-grained mask prediction.
+          </p>
+
+          <div class="prose">
+            <h3 class="method__title">Problem Formulation</h3>
+            <p>
+              Referring Video Object Segmentation (RVOS) aims to localize and segment objects in a video sequence using a natural language expression.
+              Given video \(V = \{f_t\}_{t=1}^{T}\) and expression \(e\), the referred objects are
+              \(\mathcal{O} = \{o_i\}_{i=1}^{N}\). Each object has a binary mask per frame
+              \(\mathcal{M}_t^{o_i} \in \{0,1\}^{H \times W}\), and mask sequence
+              \(\mathcal{M}^{o_i} = \{\mathcal{M}_t^{o_i}\}_{t=1}^{T}\).
+            </p>
+            <p class="eq">
+              \[
+                \mathcal{M}_t^{\mathcal{O}} = \bigvee_{i=1}^{N} \mathcal{M}_t^{o_i}, \quad t = 1,\dots,T
+              \]
+              \[
+                \mathcal{M}^{\mathcal{O}} = \{\mathcal{M}_t^{\mathcal{O}}\}_{t=1}^{T}
+              \]
+            </p>
+            <p>
+              We evaluate with \(\mathcal{J}\&\mathcal{F}\), combining region similarity (IoU) and contour accuracy.
+            </p>
+
+            <h3 class="method__title">Overview of VIRST</h3>
+            <p>
+              Existing RVOS methods often use a single anchor frame for an entire video, which is fragile under large motion, appearance change, and occlusion.
+              Some methods run frame-wise inference with N forward passes, increasing cost and temporal inconsistency.
+              VIRST addresses this through one unified forward pipeline that integrates reasoning and segmentation.
+            </p>
+            <p>
+              VIRST has three components: (1) Spatio-Temporal Fusion (STF), (2) Temporal Dynamic Anchor Updater (TDAU), and (3) Progressive Training Strategy.
+              A learnable [ST] token bridges dense segmentation features and high-level reasoning cues, and the fused tokens drive temporally consistent decoding.
+            </p>
+
+            <h3 class="method__title">Spatio-Temporal Fusion (STF)</h3>
+            <p>
+              CLIP-like features provide semantic alignment while segmentation encoder features provide spatial precision.
+              We sample \(T_{\text{seg}}\) frames and extract \(\mathbf{S}_{\text{seg}}\), then downsample to
+              \(\mathbf{S}_{\text{down}}\) and project to \(D\)-dimensional tokens.
+              Let \(\mathbf{E}_{\text{ST}}\) be learnable embeddings for \(N\) \([ST]\) tokens.
+            </p>
+            <p class="eq">
+              \[
+                \mathbf{F}_{\text{Init}} = \mathrm{CrossAttn}\!\left(\mathbf{E}_{\text{ST}},\, \mathbf{S}_{\text{down}}\right)
+              \]
+              \[
+                \mathbf{F}'_{\text{ST}} \in \mathbb{R}^{N \times T_{\text{seg}} \times D}
+              \]
+              \[
+                \tilde{\mathbf{F}}_{\text{ST}} = \mathrm{CrossAttn}\!\left(\mathbf{F}'_{\text{ST}},\, \tilde{\mathbf{S}}_{\text{down}}\right)
+                \in \mathbb{R}^{N \times T_{\text{seg}} \times D}
+              \]
+            </p>
+            <p>
+              Each temporal slice \(\tilde{\mathbf{F}}_{\text{ST}}^{(k)}\) acts as a frame-specific segmentation prompt.
+            </p>
+
+            <h3 class="method__title">Temporal Dynamic Anchor Updater (TDAU)</h3>
+            <p>
+              TDAU automatically selects and updates informative anchor frames over time without human interaction.
+              For each frame \(t\), the decoder conditions on \(\alpha\) nearby anchors for temporal coherence,
+              while a FIFO memory queue \(\mathcal{Q}_{t-1}^{(P)}\) stores recent feature states.
+            </p>
+            <p class="eq">
+              \[
+                \hat{\mathcal{M}}_t =
+                \begin{cases}
+                \mathcal{D}\big(f_t,\, \tilde{\mathbf{F}}_{\text{ST}}^{(\phi(t))}\big), & t \in \mathcal{A}, \\
+                \mathcal{D}\big(f_t,\, \{\hat{\mathcal{M}}_{t'}\}_{t' \in \mathcal{N}_t^\alpha},\, \mathcal{Q}_{t-1}^{(P)}\big), & \text{otherwise.}
+                \end{cases}
+              \]
+            </p>
+            <p>
+              This coupling of global anchor reasoning and local propagation improves robustness under motion, occlusion, and reappearance.
+            </p>
+
+            <h3 class="method__title">Progressive Training Strategy</h3>
+            <p>
+              Stage 1 (Alignment): train STF and LoRA while freezing mask/memory modules, using image-like random frame sampling.
+              Stage 2 (Few-Image Prediction): unfreeze additional projection and decoder layers for joint optimization.
+              Stage 3 (Propagation): train on full clips with fixed anchors and propagation frames for temporal conditioning.
+            </p>
+            <p>
+              The training scheme mirrors inference: anchor frames are decoded directly from fused prompts, while propagation frames use anchors plus memory states.
+              This stabilizes long-range optimization and improves cross-frame consistency.
+            </p>
+
+            <h3 class="method__title">Training Objectives</h3>
+            <p>
+              We use a composite loss with BCE, Dice, token cross-entropy, occlusion, and IoU terms.
+              BCE and Dice improve segmentation fidelity; token loss aligns text-conditioned reasoning; occlusion and IoU regularize temporal stability.
+            </p>
+            <p>
+              \[
+                L_{\text{total}} =
+                \lambda_{\text{bce}} L_{\text{bce}} +
+                \lambda_{\text{dice}} L_{\text{dice}} +
+                \lambda_{\text{token}} L_{\text{token}} +
+                \lambda_{\text{occ}} L_{\text{occ}} +
+                \lambda_{\text{iou}} L_{\text{iou}}
+              \]
+              Full details and phase-specific hyperparameters are provided in the appendix.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- RESULTS -->
+      <section id="results" class="section">
+        <div class="container">
+          <h2 class="section__title">Experiments</h2>
+          <p class="section__lead">
+            We evaluate VIRST with comprehensive experimental settings, benchmark comparisons, and ablation studies.
+          </p>
+
+          <div class="prose">
+            <h3 class="method__title">Experimental Settings</h3>
+            <p>
+              In our experiments, the vision-language backbone is initialized with VideoChat-Flash-7B, whose vision encoder is a ViT-based model pretrained with UMT, while the mask prediction branch adopts SAM2.
+              Low-rank adaptation (LoRA) is applied for efficient fine-tuning, and the STF module is trained from scratch.
+            </p>
+            <p>
+              The training corpus includes Ref-DAVIS17, Ref-YouTube-VOS, MeViS, ReVOS, and LV-VIS, together with RefCOCO/RefCOCO+/RefCOCOg, ADE20K, COCO-Stuff, PACO, PASCAL-Part, ReasonSeg, and VideoLLaVA-Instruct.
+              Training is conducted on eight NVIDIA H100 GPUs for three days. Additional implementation details are provided in the appendix.
+            </p>
+
+            <figure class="figure">
+              <img class="figure__img" src="./main_result.png" alt="ST-attention visualization placeholder" />
+              <figcaption class="figure__cap">
+                <span class="cap__label">Figure.</span> ST attention visualization placeholder (`fig_st_attention`).
+              </figcaption>
+            </figure>
+
+            <h3 class="method__title">Referring Video Object Segmentation</h3>
+            <p>
+              We evaluate on ReVOS, MeViS, Ref-YT-VOS, and Ref-DAVIS17. Across all settings, VIRST achieves consistent state-of-the-art-level performance and strong margins over previous methods.
+            </p>
+            <p>
+              On ReVOS, which contains reasoning-heavy queries, VIRST performs strongly on both referring and reasoning settings, with larger gains in reasoning-oriented cases.
+              On MeViS, Ref-YT-VOS, and Ref-DAVIS17, it also maintains leading performance and stable cross-dataset generalization.
+            </p>
+            <p>
+              Placeholder tables included in this section: `tab_ablation_fusion`, `tab_ablation_selection`, and `tab_ablation_keyframe_num`.
+            </p>
+
+            <h3 class="method__title">Image Segmentation</h3>
+            <p>
+              We further evaluate on RefCOCO, RefCOCO+, RefCOCOg, and ReasonSeg to test whether the design generalizes beyond videos.
+              VIRST shows strong performance on major splits while remaining competitive across all reported settings.
+            </p>
+
+            <h3 class="method__title">Ablation Studies</h3>
+            <p>
+              <strong>Effect of STF.</strong> We ablate Initial Fusion and ST-Fusion separately.
+              Removing either component degrades \(\mathcal{J}\&\mathcal{F}\), while enabling both yields clear gains in spatio-temporal reasoning and alignment quality.
+            </p>
+            <p>
+              <strong>Effect of TDAU.</strong> We compare first-frame, CLIP-based, random-3, uniform-3, and dynamic anchor strategies.
+              Dynamic anchor selection is most robust, especially on motion-heavy videos.
+            </p>
+            <p>
+              <strong>Effect of anchor count.</strong> Increasing \(\alpha\) consistently improves performance by expanding temporal coverage.
+              This also acts as an inference-time scaling knob: larger \(\alpha\) trades additional compute for improved reliability.
+            </p>
+          </div>
+
+          <figure class="figure">
+            <img class="figure__img figure__img--tall" src="./main_result.png" alt="Main result figure (detailed view)" />
+            <figcaption class="figure__cap">
+              <span class="cap__label">Figure 2.</span> Main experiment result placeholder (`main_result.pdf` preview image).
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__wrap footer__top">
+        <div class="footer__links">
+          <div class="footer__col">
+            <div class="footer__head">Project</div>
+            <a href="#overview">Overview</a>
+            <a href="#methods">Methods</a>
+            <a href="#results">Experiments</a>
+          </div>
+          <div class="footer__col">
+            <div class="footer__head">AIDAS Lab</div>
+            <a href="https://aidas.snu.ac.kr" target="_blank" rel="noopener noreferrer">AIDAS Lab Website</a>
+            <span>Seoul National University</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__wrap footer__bottom-inner">
+          <div>© 2026 OMaDA Project</div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
