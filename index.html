@@ -50,6 +50,14 @@
             height: auto;
             margin-right: 20px;
         }
+        .publication-image {
+            width: 150px;
+            height: 90px;
+            object-fit: contain;
+            object-position: center;
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
         .award-item {
             flex: 1;
             display: flex;
@@ -104,8 +112,8 @@
             <li><a href="#introduction">Introduction</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#research">Research</a></li>
-            <li><a href="#awards">Awards</a></li>
             <li><a href="#publications">Publications</a></li>
+            <li><a href="#awards">Awards</a></li>
             <li><a href="#presentations">Presentations</a></li>
             <li><a href="#patents">Patents</a></li>
             <li><a href="#language">Language</a></li>
@@ -146,6 +154,33 @@
                 </li>
             </ul>
         </section>
+        <section id="publications">
+            <h2>Publications</h2>
+            
+                <div class="content-with-media">
+                    <img src="assets/publications/virst.png" alt="Publication Image" class="publication-image">
+                    <div class="publication-item">
+                        <div>
+                            <p class="publication-title">VIRST: Video-Instructed Reasoning assistant for SpatioTemporal Segmentation</p>
+                            <p><strong>Jihwan Hong</strong>*, Jaeyoung Do&dagger;</p>
+                            <p><i>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2026.</p>
+                        </div>
+                        <div class="date">2026</div>
+                    </div>
+                </div>
+
+                <div class="content-with-media">
+                    <img src="assets/publications/soccernet_abstract.png" alt="Publication Image" class="publication-image">
+                    <div class="publication-item">
+                        <div>
+                            <p class="publication-title"><a href="https://arxiv.org/abs/2409.10587">SoccerNet 2024 Challenges Results</a></p>
+                            <p><i>arXiv preprint</i>, arXiv:2409.10587, 2024.</p> 
+                        </div>
+                        <div class="date">2024</div>
+                    </div>
+                </div>
+        </section>
+
         <section id="awards" class="awards-section">
             <h2>Awards & Honors</h2>
             
@@ -207,21 +242,6 @@
                 </div>
             </div>
 
-        </section>
-
-        <section id="publications">
-            <h2>Publications</h2>
-            
-                <div class="content-with-media">
-                    <img src="assets/publications/soccernet_abstract.png" alt="Publication Image">
-                    <div class="publication-item">
-                        <div>
-                            <p class="publication-title"><a href="https://arxiv.org/abs/2409.10587">SoccerNet 2024 Challenges Results</a></p>
-                            <p><i>arXiv preprint</i>, arXiv:2409.10587, 2024.</p> 
-                        </div>
-                        <div class="date">2024</div>
-                    </div>
-                </div>
         </section>
 
         <section id="presentations">
