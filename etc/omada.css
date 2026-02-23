@@ -393,22 +393,38 @@ a { color: inherit; text-decoration: none; }
    Capabilities (Gemini-style cards)
 ================================ */
 
-/* 2x3 grid */
-.cap-grid {
+/* 2x3 grid (targets your existing HTML container) */
+#capabilities .card-group__cards {
   margin-top: 18px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
-/* Each flip-card is a "card box" */
-.flip-card {
+/* wrapper divs become pass-through */
+#capabilities .generic-card-group-container {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  #capabilities .card-group__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  #capabilities .card-group__cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Flip */
+#capabilities .flip-card {
   perspective: 1200px;
   display: block;
 }
 
-/* The actual bordered card container (front+back sit inside) */
-.flip-card__inner {
+#capabilities .flip-card__inner {
   position: relative;
   width: 100%;
   min-height: 210px;
@@ -423,12 +439,11 @@ a { color: inherit; text-decoration: none; }
   overflow: hidden;
 }
 
-.flip-card.is-flipped .flip-card__inner {
+#capabilities .flip-card.is-flipped .flip-card__inner {
   transform: rotateY(180deg);
 }
 
-/* Front / Back faces fill the card */
-.flip-card__face {
+#capabilities .flip-card__face {
   position: absolute;
   inset: 0;
 
@@ -441,49 +456,15 @@ a { color: inherit; text-decoration: none; }
   padding: 18px 18px 16px;
 }
 
-.flip-card__face--front { transform: rotateY(0deg); }
-.flip-card__face--back  { transform: rotateY(180deg); }
+#capabilities .flip-card__face--front { transform: rotateY(0deg); }
+#capabilities .flip-card__face--back  { transform: rotateY(180deg); }
 
-/* Title + description styling */
-.cap__title {
-  margin: 0;
-  font-size: 1.05rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-}
-
-.cap__desc {
-  margin: 0;
-  color: rgba(17, 24, 39, 0.66);
-  font-weight: 600;
-  line-height: 1.45;
-}
-
-/* Optional "icon placeholder" (leave empty if you want) */
-.cap__icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 14px;
-  border: 1px solid rgba(15, 15, 112, 0.16);
-  background: rgba(15, 15, 112, 0.06);
-}
-
-/* Hover lift (apply to inner so it doesn't break 3D) */
-.flip-card:hover .flip-card__inner {
+/* Hover lift (preserve flip) */
+#capabilities .flip-card:hover .flip-card__inner {
   transform: translateY(-2px);
 }
-
-/* When flipped + hovered, keep the rotation */
-.flip-card.is-flipped:hover .flip-card__inner {
+#capabilities .flip-card.is-flipped:hover .flip-card__inner {
   transform: rotateY(180deg) translateY(-2px);
-}
-
-/* Responsive: 2 columns then 1 column */
-@media (max-width: 860px) {
-  .cap-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 560px) {
-  .cap-grid { grid-template-columns: 1fr; }
 }
 
 /* Mobile */
