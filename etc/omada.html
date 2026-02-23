@@ -90,10 +90,7 @@
 
           <div class="prose">
             <p>
-              Referring Video Object Segmentation (RVOS) aims to segment target objects in videos based on natural language descriptions. However, CLIP-based and keyframe-based approaches that couple a vision-language model with a separate propagation module often fail to capture rapidly changing spatiotemporal dynamics, and to handle queries that require multi-step reasoning, which leads to sharp performance drops on motion-intensive and reasoning-oriented videos beyond static RVOS benchmarks. To address these limitations, we propose VIRST (Video-Instructed Reasoning assistant for Spatio-Temporal Segmentation), an end-to-end framework that unifies global video reasoning and pixel-level mask prediction within a single model. VIRST bridges semantic and segmentation representations through the Spatio-Temporal Fusion (STF), which fuses segmentation-aware video features into the vision-language backbone, and employs the Temporal Dynamic Anchor Updater (TDAU) to maintain dynamically updated anchor frames that provide stable temporal cues under large motion, occlusion, and reappearance. This unified design achieves state-of-the-art results across diverse RVOS benchmarks under realistic and challenging conditions, demonstrating strong generalization to both referring and reasoning-oriented settings.
-            </p>
-            <p>
-              Referring Video Object Segmentation (RVOS) aims to segment target objects in videos based on natural language descriptions. However, CLIP-based and keyframe-based approaches that couple a vision-language model with a separate propagation module often fail to capture rapidly changing spatiotemporal dynamics, and to handle queries that require multi-step reasoning, which leads to sharp performance drops on motion-intensive and reasoning-oriented videos beyond static RVOS benchmarks. To address these limitations, we propose VIRST (Video-Instructed Reasoning assistant for Spatio-Temporal Segmentation), an end-to-end framework that unifies global video reasoning and pixel-level mask prediction within a single model. VIRST bridges semantic and segmentation representations through the Spatio-Temporal Fusion (STF), which fuses segmentation-aware video features into the vision-language backbone, and employs the Temporal Dynamic Anchor Updater (TDAU) to maintain dynamically updated anchor frames that provide stable temporal cues under large motion, occlusion, and reappearance. This unified design achieves state-of-the-art results across diverse RVOS benchmarks under realistic and challenging conditions, demonstrating strong generalization to both referring and reasoning-oriented settings.
+              OMADA is an omnimodal discrete diffusion foundation model released by the AIDAS Laboratory. It is the first masked diffusion architecture to unify text, image, video, and speech understanding and generation within a single framework. By leveraging iterative confidence-based refinement and bidirectional token modeling, OMADA enables scalable any-to-any cross-modal generation across modalities. As demonstrated in our experiments, OMADA achieves strong and consistent performance across diverse multimodal benchmarks, validating discrete diffusion as a practical paradigm for unified omnimodal intelligence.
             </p>
           </div>
 
@@ -103,6 +100,269 @@
               <span class="cap__label">Figure 1.</span> Caption placeholder for your main figure.
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      <!-- CAPABILITIES -->
+      <section id="capabilities" class="section">
+        <div class="container">
+          <h2 class="section__title">Capabilities</h2>
+
+          <div class="card-group card-group--generic-card-group grid spacer-block-xs-bottom">
+            <div class="card-group__cards grid grid__column--span-12">
+
+              <!-- 1) Text Reasoning -->
+              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+                  <div class="card__inner flip-card__inner">
+                    <!-- FRONT -->
+                    <div class="flip-card__face flip-card__face--front">
+                      <div class="media-content-wrapper">
+                        <!-- icon placeholder (leave blank) -->
+                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
+                          <div class="block-contained">
+                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
+                              <div class="media-icon--contained__inner media--aspect-1-1">
+                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
+                                  <div class="block-symbol">
+                                    <!-- leave blank -->
+                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Text Reasoning</h3>
+                        <div class="card__text text-body">
+                          <p>Solves multi-step problems and follows structured instructions with robust reasoning.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- BACK -->
+                    <div class="flip-card__face flip-card__face--back">
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Text Reasoning</h3>
+                        <div class="card__text text-body">
+                          <p><!-- TODO: generation example placeholder --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 2) Image Understanding -->
+              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+                  <div class="card__inner flip-card__inner">
+                    <div class="flip-card__face flip-card__face--front">
+                      <div class="media-content-wrapper">
+                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
+                          <div class="block-contained">
+                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
+                              <div class="media-icon--contained__inner media--aspect-1-1">
+                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
+                                  <div class="block-symbol">
+                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Image Understanding</h3>
+                        <div class="card__text text-body">
+                          <p>Answers detailed visual questions and understands fine-grained objects, text, and layouts.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card__face flip-card__face--back">
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Image Understanding</h3>
+                        <div class="card__text text-body">
+                          <p><!-- TODO: generation example placeholder --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 3) Video Understanding -->
+              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+                  <div class="card__inner flip-card__inner">
+                    <div class="flip-card__face flip-card__face--front">
+                      <div class="media-content-wrapper">
+                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
+                          <div class="block-contained">
+                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
+                              <div class="media-icon--contained__inner media--aspect-1-1">
+                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
+                                  <div class="block-symbol">
+                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Video Understanding</h3>
+                        <div class="card__text text-body">
+                          <p>Tracks temporal dynamics and answers spatiotemporal questions over videos.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card__face flip-card__face--back">
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Video Understanding</h3>
+                        <div class="card__text text-body">
+                          <p><!-- TODO: generation example placeholder --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 4) Image Generation -->
+              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+                  <div class="card__inner flip-card__inner">
+                    <div class="flip-card__face flip-card__face--front">
+                      <div class="media-content-wrapper">
+                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
+                          <div class="block-contained">
+                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
+                              <div class="media-icon--contained__inner media--aspect-1-1">
+                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
+                                  <div class="block-symbol">
+                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Image Generation</h3>
+                        <div class="card__text text-body">
+                          <p>Generates high-quality images from text prompts with strong compositional control.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card__face flip-card__face--back">
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Image Generation</h3>
+                        <div class="card__text text-body">
+                          <p><!-- TODO: generation example placeholder --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 5) Image Editing -->
+              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+                  <div class="card__inner flip-card__inner">
+                    <div class="flip-card__face flip-card__face--front">
+                      <div class="media-content-wrapper">
+                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
+                          <div class="block-contained">
+                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
+                              <div class="media-icon--contained__inner media--aspect-1-1">
+                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
+                                  <div class="block-symbol">
+                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Image Editing</h3>
+                        <div class="card__text text-body">
+                          <p>Edits images with natural language instructions while preserving identity and structure.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card__face flip-card__face--back">
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">Image Editing</h3>
+                        <div class="card__text text-body">
+                          <p><!-- TODO: generation example placeholder --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- 6) ASR & TTS -->
+              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+                  <div class="card__inner flip-card__inner">
+                    <div class="flip-card__face flip-card__face--front">
+                      <div class="media-content-wrapper">
+                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
+                          <div class="block-contained">
+                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
+                              <div class="media-icon--contained__inner media--aspect-1-1">
+                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
+                                  <div class="block-symbol">
+                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
+                      </div>
+
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">ASR &amp; TTS</h3>
+                        <div class="card__text text-body">
+                          <p>Transcribes speech accurately and synthesizes natural speech from text prompts.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="flip-card__face flip-card__face--back">
+                      <div class="card__content card__content--medium">
+                        <h3 class="heading-9 card__title">ASR &amp; TTS</h3>
+                        <div class="card__text text-body">
+                          <p><!-- TODO: generation example placeholder --></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
 
@@ -312,5 +572,43 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      (function () {
+        const cards = document.querySelectorAll(".js-flip-card");
+        const timers = new WeakMap();
+    
+        function getDelay(el) {
+          const d = parseInt(el.getAttribute("data-flip-delay") || "650", 10);
+          return Number.isFinite(d) ? d : 650;
+        }
+    
+        cards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            const delay = getDelay(card);
+            const t = window.setTimeout(() => card.classList.add("is-flipped"), delay);
+            timers.set(card, t);
+          });
+    
+          card.addEventListener("mouseleave", () => {
+            const t = timers.get(card);
+            if (t) window.clearTimeout(t);
+            card.classList.remove("is-flipped");
+          });
+    
+          // Optional: keyboard accessibility (focus triggers flip after delay)
+          card.addEventListener("focusin", () => {
+            const delay = getDelay(card);
+            const t = window.setTimeout(() => card.classList.add("is-flipped"), delay);
+            timers.set(card, t);
+          });
+          card.addEventListener("focusout", () => {
+            const t = timers.get(card);
+            if (t) window.clearTimeout(t);
+            card.classList.remove("is-flipped");
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
