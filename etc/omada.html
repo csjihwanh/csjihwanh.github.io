@@ -59,7 +59,7 @@
           <h1 class="hero__title">Dynin-Omni Preview</h1>
 
           <p class="hero__subtitle">
-            We introduce Dynin-Omni, a masked diffusion-based omnimodal foundation model that unifies text, image, video, and speech understanding and generation, achieving strong cross-modal performance within a single architecture.
+            We introduce Dynin-Omni, a first masked diffusion-based omnimodal foundation model that unifies text, image, video, and speech understanding and generation, achieving strong cross-modal performance within a single architecture.
           </p>
 
           <div class="hero__actions">
@@ -95,10 +95,7 @@
           </div>
 
           <figure class="figure">
-            <img class="figure__img" src="./Fig_main_result.png" alt="Main result figure" />
-            <figcaption class="figure__cap">
-              <span class="cap__label">Figure 1.</span> Caption placeholder for your main figure.
-            </figcaption>
+            <img class="figure__img" src="./assets/Fig_main_result.png" alt="Main result figure" />
           </figure>
         </div>
       </section>
@@ -125,7 +122,12 @@
                               <div class="media-icon--contained__inner media--aspect-1-1">
                                 <div class="media-icon__icon-wrapper media-icon--contained__icon">
                                   <div class="block-symbol">
-                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                    <img
+                                      class="cap-icon__img"
+                                      src="./assets/icon_text.png"
+                                      alt="Text icon"
+                                      draggable="false"
+                                    />
                                   </div>
                                 </div>
                               </div>
@@ -144,7 +146,19 @@
                               <div class="media-icon--contained__inner media--aspect-1-1">
                                 <div class="media-icon__icon-wrapper media-icon--contained__icon">
                                   <div class="block-symbol">
-                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                    <button
+                                      class="cap-icon__btn"
+                                      type="button"
+                                      data-modal-src="./assets/Fig_geneval.png"
+                                      aria-label="Open image preview"
+                                    >
+                                      <img
+                                        class="cap-icon__img"
+                                        src="./assets/icon_whatever.png"
+                                        alt="Preview"
+                                        draggable="false"
+                                      />
+                                    </button>
                                   </div>
                                 </div>
                               </div>
@@ -498,5 +512,13 @@
         });
       })();
     </script>
+    <div class="img-modal" id="imgModal" aria-hidden="true">
+      <div class="img-modal__backdrop" data-close-modal></div>
+    
+      <div class="img-modal__dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+        <button class="img-modal__close" type="button" data-close-modal aria-label="Close">×</button>
+        <img class="img-modal__img" id="imgModalImg" alt="" />
+      </div>
+    </div>
   </body>
 </html>
