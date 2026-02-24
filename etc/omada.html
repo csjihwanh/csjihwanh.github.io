@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OMaDA — Omni-Modal Model</title>
 
-    <meta name="description" content="OMaDA — omni-modal foundation model (placeholder launch page)." />
+    <meta name="description" content="Dynin-Omni — omni-modal foundation model (placeholder launch page)." />
     <meta name="theme-color" content="#0f0f70" />
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" />
@@ -25,9 +25,9 @@
     <!-- Sticky top nav (simple, Seed-like, but not identical) -->
     <header class="site-header">
       <nav class="nav" aria-label="Primary">
-        <a class="brand" href="#top" aria-label="OMaDA Home">
+        <a class="brand" href="#top" aria-label="Dynin-Omni Home">
           <span class="brand__dot" aria-hidden="true"></span>
-          <span class="brand__text">OMaDA</span>
+          <span class="brand__text">Dynin-Omni</span>
         </a>
 
         <button
@@ -56,10 +56,10 @@
         <div class="container hero__inner">
           <div class="hero__meta">Feb 17, 2026</div>
 
-          <h1 class="hero__title">VIRST Preview</h1>
+          <h1 class="hero__title">Dynin-Omni Preview</h1>
 
           <p class="hero__subtitle">
-            We introduce (), a masked diffusion-based omnimodal foundation model that unifies text, image, video, and speech understanding and generation, achieving strong cross-modal performance within a single architecture.
+            We introduce Dynin-Omni, a masked diffusion-based omnimodal foundation model that unifies text, image, video, and speech understanding and generation, achieving strong cross-modal performance within a single architecture.
           </p>
 
           <div class="hero__actions">
@@ -75,7 +75,7 @@
               </div>
 
               <div class="video__text">
-                <div class="video__title">OMaDA</div>
+                <div class="video__title">Dynin-Omni</div>
                 <div class="video__desc">Intro video placeholder</div>
               </div>
             </div>
@@ -90,12 +90,12 @@
 
           <div class="prose">
             <p>
-              OMADA is an omnimodal discrete diffusion foundation model released by the AIDAS Laboratory. It is the first masked diffusion architecture to unify text, image, video, and speech understanding and generation within a single framework. By leveraging iterative confidence-based refinement and bidirectional token modeling, OMADA enables scalable any-to-any cross-modal generation across modalities. As demonstrated in our experiments, OMADA achieves strong and consistent performance across diverse multimodal benchmarks, validating discrete diffusion as a practical paradigm for unified omnimodal intelligence.
+              Dynin-Omni is an omnimodal discrete diffusion foundation model released by the AIDAS Laboratory. It is the first masked diffusion architecture to unify text, image, video, and speech understanding and generation within a single framework. By leveraging iterative confidence-based refinement and bidirectional token modeling, OMADA enables scalable any-to-any cross-modal generation across modalities. As demonstrated in our experiments, Dynin-Omni achieves strong and consistent performance across diverse multimodal benchmarks, validating discrete diffusion as a practical paradigm for unified omnimodal intelligence.
             </p>
           </div>
 
           <figure class="figure">
-            <img class="figure__img" src="./main_result.png" alt="Main result figure" />
+            <img class="figure__img" src="./Fig_main_result.png" alt="Main result figure" />
             <figcaption class="figure__cap">
               <span class="cap__label">Figure 1.</span> Caption placeholder for your main figure.
             </figcaption>
@@ -112,20 +112,19 @@
             <div class="card-group__cards grid grid__column--span-12">
 
               <!-- 1) Text Reasoning -->
-              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
-                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+              <div class="generic-card-group-container">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650" tabindex="0">
                   <div class="card__inner flip-card__inner">
-                    <!-- FRONT -->
+
+                    <!-- FRONT (icon only) -->
                     <div class="flip-card__face flip-card__face--front">
-                      <div class="media-content-wrapper">
-                        <!-- icon placeholder (leave blank) -->
-                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
+                      <div class="cap-icon">
+                        <figure class="media__container">
                           <div class="block-contained">
-                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
+                            <div class="media-icon media-icon--contained media-icon--contained--outline media-icon--gemini-gradient">
                               <div class="media-icon--contained__inner media--aspect-1-1">
                                 <div class="media-icon__icon-wrapper media-icon--contained__icon">
                                   <div class="block-symbol">
-                                    <!-- leave blank -->
                                     <span class="media-icon__symbol" aria-hidden="true"></span>
                                   </div>
                                 </div>
@@ -134,231 +133,161 @@
                           </div>
                         </figure>
                       </div>
-
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Text Reasoning</h3>
-                        <div class="card__text text-body">
-                          <p>Solves multi-step problems and follows structured instructions with robust reasoning.</p>
-                        </div>
-                      </div>
                     </div>
 
-                    <!-- BACK -->
+                    <!-- BACK (icon only) -->
                     <div class="flip-card__face flip-card__face--back">
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Text Reasoning</h3>
-                        <div class="card__text text-body">
-                          <p><!-- TODO: generation example placeholder --></p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container">
+                          <div class="block-contained">
+                            <div class="media-icon media-icon--contained media-icon--contained--outline media-icon--gemini-gradient">
+                              <div class="media-icon--contained__inner media--aspect-1-1">
+                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
+                                  <div class="block-symbol">
+                                    <span class="media-icon__symbol" aria-hidden="true"></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </figure>
                       </div>
                     </div>
+
                   </div>
                 </article>
+
+                <div class="capability-meta">
+                  <h3 class="capability-title">Text Reasoning</h3>
+                  <p class="capability-desc">
+                    Solves multi-step problems and follows structured instructions with robust reasoning.
+                  </p>
+                </div>
               </div>
 
               <!-- 2) Image Understanding -->
-              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
-                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+              <div class="generic-card-group-container">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650" tabindex="0">
                   <div class="card__inner flip-card__inner">
                     <div class="flip-card__face flip-card__face--front">
-                      <div class="media-content-wrapper">
-                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
-                          <div class="block-contained">
-                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
-                              <div class="media-icon--contained__inner media--aspect-1-1">
-                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
-                                  <div class="block-symbol">
-                                    <span class="media-icon__symbol" aria-hidden="true"></span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Image Understanding</h3>
-                        <div class="card__text text-body">
-                          <p>Answers detailed visual questions and understands fine-grained objects, text, and layouts.</p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
-
                     <div class="flip-card__face flip-card__face--back">
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Image Understanding</h3>
-                        <div class="card__text text-body">
-                          <p><!-- TODO: generation example placeholder --></p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
                   </div>
                 </article>
+
+                <div class="capability-meta">
+                  <h3 class="capability-title">Image Understanding</h3>
+                  <p class="capability-desc">
+                    Answers detailed visual questions and understands fine-grained objects, text, and layouts.
+                  </p>
+                </div>
               </div>
 
               <!-- 3) Video Understanding -->
-              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
-                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+              <div class="generic-card-group-container">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650" tabindex="0">
                   <div class="card__inner flip-card__inner">
                     <div class="flip-card__face flip-card__face--front">
-                      <div class="media-content-wrapper">
-                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
-                          <div class="block-contained">
-                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
-                              <div class="media-icon--contained__inner media--aspect-1-1">
-                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
-                                  <div class="block-symbol">
-                                    <span class="media-icon__symbol" aria-hidden="true"></span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Video Understanding</h3>
-                        <div class="card__text text-body">
-                          <p>Tracks temporal dynamics and answers spatiotemporal questions over videos.</p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
-
                     <div class="flip-card__face flip-card__face--back">
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Video Understanding</h3>
-                        <div class="card__text text-body">
-                          <p><!-- TODO: generation example placeholder --></p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
                   </div>
                 </article>
+
+                <div class="capability-meta">
+                  <h3 class="capability-title">Video Understanding</h3>
+                  <p class="capability-desc">
+                    Tracks temporal dynamics and answers spatiotemporal questions over videos.
+                  </p>
+                </div>
               </div>
 
               <!-- 4) Image Generation -->
-              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
-                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+              <div class="generic-card-group-container">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650" tabindex="0">
                   <div class="card__inner flip-card__inner">
                     <div class="flip-card__face flip-card__face--front">
-                      <div class="media-content-wrapper">
-                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
-                          <div class="block-contained">
-                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
-                              <div class="media-icon--contained__inner media--aspect-1-1">
-                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
-                                  <div class="block-symbol">
-                                    <span class="media-icon__symbol" aria-hidden="true"></span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Image Generation</h3>
-                        <div class="card__text text-body">
-                          <p>Generates high-quality images from text prompts with strong compositional control.</p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
-
                     <div class="flip-card__face flip-card__face--back">
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Image Generation</h3>
-                        <div class="card__text text-body">
-                          <p><!-- TODO: generation example placeholder --></p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
                   </div>
                 </article>
+
+                <div class="capability-meta">
+                  <h3 class="capability-title">Image Generation</h3>
+                  <p class="capability-desc">
+                    Generates high-quality images from text prompts with strong compositional control.
+                  </p>
+                </div>
               </div>
 
               <!-- 5) Image Editing -->
-              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
-                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+              <div class="generic-card-group-container">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650" tabindex="0">
                   <div class="card__inner flip-card__inner">
                     <div class="flip-card__face flip-card__face--front">
-                      <div class="media-content-wrapper">
-                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
-                          <div class="block-contained">
-                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
-                              <div class="media-icon--contained__inner media--aspect-1-1">
-                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
-                                  <div class="block-symbol">
-                                    <span class="media-icon__symbol" aria-hidden="true"></span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Image Editing</h3>
-                        <div class="card__text text-body">
-                          <p>Edits images with natural language instructions while preserving identity and structure.</p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
-
                     <div class="flip-card__face flip-card__face--back">
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">Image Editing</h3>
-                        <div class="card__text text-body">
-                          <p><!-- TODO: generation example placeholder --></p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
                   </div>
                 </article>
+
+                <div class="capability-meta">
+                  <h3 class="capability-title">Image Editing</h3>
+                  <p class="capability-desc">
+                    Edits images with natural language instructions while preserving identity and structure.
+                  </p>
+                </div>
               </div>
 
               <!-- 6) ASR & TTS -->
-              <div class="generic-card-group-container grid__column--span-4-xs grid__column--span-4-sm grid__column--span-4-md grid__column--span-4-lg grid__column--span-4-xl">
-                <article class="card card--general flip-card js-flip-card" data-flip-delay="650">
+              <div class="generic-card-group-container">
+                <article class="card card--general flip-card js-flip-card" data-flip-delay="650" tabindex="0">
                   <div class="card__inner flip-card__inner">
                     <div class="flip-card__face flip-card__face--front">
-                      <div class="media-content-wrapper">
-                        <figure class="media__container no-light-mode-mobile no-dark-mode no-dark-mode-mobile has-default-media">
-                          <div class="block-contained">
-                            <div class="media-icon media-icon--contained js-media-icon media-icon--contained--outline media-icon--gemini-gradient">
-                              <div class="media-icon--contained__inner media--aspect-1-1">
-                                <div class="media-icon__icon-wrapper media-icon--contained__icon">
-                                  <div class="block-symbol">
-                                    <span class="media-icon__symbol" aria-hidden="true"></span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </figure>
-                      </div>
-
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">ASR &amp; TTS</h3>
-                        <div class="card__text text-body">
-                          <p>Transcribes speech accurately and synthesizes natural speech from text prompts.</p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
-
                     <div class="flip-card__face flip-card__face--back">
-                      <div class="card__content card__content--medium">
-                        <h3 class="heading-9 card__title">ASR &amp; TTS</h3>
-                        <div class="card__text text-body">
-                          <p><!-- TODO: generation example placeholder --></p>
-                        </div>
+                      <div class="cap-icon">
+                        <figure class="media__container"><span class="media-icon__symbol" aria-hidden="true"></span></figure>
                       </div>
                     </div>
                   </div>
                 </article>
+
+                <div class="capability-meta">
+                  <h3 class="capability-title">ASR &amp; TTS</h3>
+                  <p class="capability-desc">
+                    Transcribes speech accurately and synthesizes natural speech from text prompts.
+                  </p>
+                </div>
               </div>
 
             </div>
@@ -369,111 +298,78 @@
       <!-- METHODS -->
       <section id="methods" class="section section--alt">
         <div class="container">
-          <h2 class="section__title">Method</h2>
+          <h2 class="section__title">Omnimodal Discrete Diffusion Framework</h2>
           <p class="section__lead">
-            We present VIRST, a unified framework for referring video object segmentation with global spatio-temporal reasoning and fine-grained mask prediction.
+            We introduce <strong>Dynin-Omni</strong>, an omnimodal foundation model that unifies understanding and generation across
+            <strong>text</strong>, <strong>image/video</strong>, and <strong>speech</strong> using a single <strong>discrete masked-diffusion</strong>
+            Transformer. By operating directly in a shared token space and refining predictions in parallel through iterative denoising,
+            Dynin-Omni enables efficient decoding, flexible output lengths, and native cross-modal generation without switching to separate
+            modality-specific backbones.
           </p>
 
           <div class="prose">
-            <h3 class="method__title">Problem Formulation</h3>
+            <h3 class="method__title">Omnimodal Discrete Diffusion</h3>
             <p>
-              Referring Video Object Segmentation (RVOS) aims to localize and segment objects in a video sequence using a natural language expression.
-              Given video \(V = \{f_t\}_{t=1}^{T}\) and expression \(e\), the referred objects are
-              \(\mathcal{O} = \{o_i\}_{i=1}^{N}\). Each object has a binary mask per frame
-              \(\mathcal{M}_t^{o_i} \in \{0,1\}^{H \times W}\), and mask sequence
-              \(\mathcal{M}^{o_i} = \{\mathcal{M}_t^{o_i}\}_{t=1}^{T}\).
-            </p>
-            <p class="eq">
-              \[
-                \mathcal{M}_t^{\mathcal{O}} = \bigvee_{i=1}^{N} \mathcal{M}_t^{o_i}, \quad t = 1,\dots,T
-              \]
-              \[
-                \mathcal{M}^{\mathcal{O}} = \{\mathcal{M}_t^{\mathcal{O}}\}_{t=1}^{T}
-              \]
-            </p>
-            <p>
-              We evaluate with \(\mathcal{J}\&\mathcal{F}\), combining region similarity (IoU) and contour accuracy.
+              Our framework formulates omnimodal generation as a <strong>masked token denoising</strong> process over discrete sequences.
+              Instead of left-to-right autoregression, the model starts from heavily-masked outputs and progressively reconstructs tokens via
+              repeated refinement steps. This discrete diffusion view provides two practical advantages: (1) <strong>parallelism</strong>—many
+              tokens can be updated simultaneously for fast decoding; and (2) <strong>editability</strong>—uncertain regions can be re-masked
+              and corrected, making the process robust and controllable across modalities while preserving high-confidence predictions.
             </p>
 
-            <h3 class="method__title">Overview of VIRST</h3>
+            <h3 class="method__title">Unified Token Space & Architecture</h3>
             <p>
-              Existing RVOS methods often use a single anchor frame for an entire video, which is fragile under large motion, appearance change, and occlusion.
-              Some methods run frame-wise inference with N forward passes, increasing cost and temporal inconsistency.
-              VIRST addresses this through one unified forward pipeline that integrates reasoning and segmentation.
-            </p>
-            <p>
-              VIRST has three components: (1) Spatio-Temporal Fusion (STF), (2) Temporal Dynamic Anchor Updater (TDAU), and (3) Progressive Training Strategy.
-              A learnable [ST] token bridges dense segmentation features and high-level reasoning cues, and the fused tokens drive temporally consistent decoding.
+              Dynin-Omni maps each modality into a <strong>single discrete token space</strong> using modality tokenizers (text, vision, speech),
+              and trains a unified Transformer to predict masked tokens with a standard cross-entropy objective. The same backbone therefore
+              supports both <strong>understanding</strong> (conditioning on observed tokens) and <strong>generation</strong> (iteratively filling
+              masked outputs) for all modalities, enabling native cross-modal tasks (e.g., image→text, text→image, speech→text) without
+              hand-designed bridging modules.
             </p>
 
-            <h3 class="method__title">Spatio-Temporal Fusion (STF)</h3>
+            <!-- Figure: Main architecture -->
+            <figure class="method__figure">
+              <!-- Replace src with your website path, e.g., ./assets/Fig_main_arch.png -->
+              <img
+                src="./assets/Fig_main_arch.png"
+                alt="Dynin-Omni main architecture: unified training with tokenizers and discrete diffusion inference for text, image, and speech."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure.</strong> Dynin-Omni uses a unified Transformer trained with random masking across modality tokens, and performs
+                discrete diffusion decoding at inference with modality-appropriate parallel schedules (e.g., block-wise for temporal sequences).
+              </figcaption>
+            </figure>
+
+            <h3 class="method__title">Training Pipeline with Modality-Disentangled Model Merging</h3>
             <p>
-              CLIP-like features provide semantic alignment while segmentation encoder features provide spatial precision.
-              We sample \(T_{\text{seg}}\) frames and extract \(\mathbf{S}_{\text{seg}}\), then downsample to
-              \(\mathbf{S}_{\text{down}}\) and project to \(D\)-dimensional tokens.
-              Let \(\mathbf{E}_{\text{ST}}\) be learnable embeddings for \(N\) \([ST]\) tokens.
-            </p>
-            <p class="eq">
-              \[
-                \mathbf{F}_{\text{Init}} = \mathrm{CrossAttn}\!\left(\mathbf{E}_{\text{ST}},\, \mathbf{S}_{\text{down}}\right)
-              \]
-              \[
-                \mathbf{F}'_{\text{ST}} \in \mathbb{R}^{N \times T_{\text{seg}} \times D}
-              \]
-              \[
-                \tilde{\mathbf{F}}_{\text{ST}} = \mathrm{CrossAttn}\!\left(\mathbf{F}'_{\text{ST}},\, \tilde{\mathbf{S}}_{\text{down}}\right)
-                \in \mathbb{R}^{N \times T_{\text{seg}} \times D}
-              \]
-            </p>
-            <p>
-              Each temporal slice \(\tilde{\mathbf{F}}_{\text{ST}}^{(k)}\) acts as a frame-specific segmentation prompt.
+              We build Dynin-Omni through a staged pipeline that emphasizes <strong>model merging</strong> as the key step for native omnimodal
+              unification. Stage 1 adapts modality-specific components while maintaining a strong text-centric backbone. We then apply
+              <strong>modality-disentangled merging</strong> to combine complementary weights without overwriting the backbone’s knowledge,
+              producing an initialization that is both stable and omnimodally aligned. Stage 2 performs omnimodal SFT for joint training across
+              modalities, and Stage 3 continues capability growth (e.g., reasoning, higher-resolution generation, longer speech) via continual SFT.
             </p>
 
-            <h3 class="method__title">Temporal Dynamic Anchor Updater (TDAU)</h3>
-            <p>
-              TDAU automatically selects and updates informative anchor frames over time without human interaction.
-              For each frame \(t\), the decoder conditions on \(\alpha\) nearby anchors for temporal coherence,
-              while a FIFO memory queue \(\mathcal{Q}_{t-1}^{(P)}\) stores recent feature states.
-            </p>
-            <p class="eq">
-              \[
-                \hat{\mathcal{M}}_t =
-                \begin{cases}
-                \mathcal{D}\big(f_t,\, \tilde{\mathbf{F}}_{\text{ST}}^{(\phi(t))}\big), & t \in \mathcal{A}, \\
-                \mathcal{D}\big(f_t,\, \{\hat{\mathcal{M}}_{t'}\}_{t' \in \mathcal{N}_t^\alpha},\, \mathcal{Q}_{t-1}^{(P)}\big), & \text{otherwise.}
-                \end{cases}
-              \]
-            </p>
-            <p>
-              This coupling of global anchor reasoning and local propagation improves robustness under motion, occlusion, and reappearance.
-            </p>
+            <!-- Figure: Stages (highlight merging) -->
+            <figure class="method__figure">
+              <!-- Replace src with your website path, e.g., ./assets/Fig_stage.png -->
+              <img
+                src="./assets/Fig_stage.png"
+                alt="Three-stage training pipeline highlighting model merging between modality adaptation and omnimodal SFT."
+                loading="lazy"
+              />
+              <figcaption>
+                <strong>Figure.</strong> Training stages for Dynin-Omni. We highlight <strong>Model Merging</strong> as the bridge from modality
+                adaptation to native omnimodal unification, preserving backbone knowledge while enabling stable combined training.
+              </figcaption>
+            </figure>
 
-            <h3 class="method__title">Progressive Training Strategy</h3>
+            <h3 class="method__title">Inference: Modality-Aware Parallel Decoding</h3>
             <p>
-              Stage 1 (Alignment): train STF and LoRA while freezing mask/memory modules, using image-like random frame sampling.
-              Stage 2 (Few-Image Prediction): unfreeze additional projection and decoder layers for joint optimization.
-              Stage 3 (Propagation): train on full clips with fixed anchors and propagation frames for temporal conditioning.
-            </p>
-            <p>
-              The training scheme mirrors inference: anchor frames are decoded directly from fused prompts, while propagation frames use anchors plus memory states.
-              This stabilizes long-range optimization and improves cross-frame consistency.
-            </p>
-
-            <h3 class="method__title">Training Objectives</h3>
-            <p>
-              We use a composite loss with BCE, Dice, token cross-entropy, occlusion, and IoU terms.
-              BCE and Dice improve segmentation fidelity; token loss aligns text-conditioned reasoning; occlusion and IoU regularize temporal stability.
-            </p>
-            <p>
-              \[
-                L_{\text{total}} =
-                \lambda_{\text{bce}} L_{\text{bce}} +
-                \lambda_{\text{dice}} L_{\text{dice}} +
-                \lambda_{\text{token}} L_{\text{token}} +
-                \lambda_{\text{occ}} L_{\text{occ}} +
-                \lambda_{\text{iou}} L_{\text{iou}}
-              \]
-              Full details and phase-specific hyperparameters are provided in the appendix.
+              At inference, Dynin-Omni performs iterative denoising with <strong>confidence-based remasking</strong>, updating low-confidence
+              positions while keeping confident tokens fixed. We use modality-aware schedules: <strong>block-wise parallel decoding</strong> for
+              temporally ordered sequences (text and speech) and <strong>fully parallel decoding</strong> for spatial grids (image/video tokens).
+              After diffusion decoding, modality detokenizers convert predicted tokens back to the final outputs, yielding a single, consistent
+              generation procedure across omnimodal tasks.
             </p>
           </div>
         </div>
