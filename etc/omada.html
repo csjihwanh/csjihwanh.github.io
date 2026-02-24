@@ -90,7 +90,7 @@
 
           <div class="prose">
             <p>
-              Dynin-Omni is an omnimodal discrete diffusion foundation model released by the AIDAS Laboratory. It is the first masked diffusion architecture to unify text, image, video, and speech understanding and generation within a single framework. By leveraging iterative confidence-based refinement and bidirectional token modeling, OMADA enables scalable any-to-any cross-modal generation across modalities. As demonstrated in our experiments, Dynin-Omni achieves strong and consistent performance across diverse multimodal benchmarks, validating discrete diffusion as a practical paradigm for unified omnimodal intelligence.
+              <strong>Dynin-Omni</strong> is an omnimodal discrete diffusion foundation model released by the AIDAS Laboratory. It is the first masked diffusion architecture to unify text, image, video, and speech understanding and generation within a single framework. By leveraging iterative confidence-based refinement and bidirectional token modeling, <strong>Dynin-Omni</strong> enables scalable any-to-any cross-modal generation across modalities. As demonstrated in our experiments, <strong>Dynin-Omni</strong> achieves strong and consistent performance across diverse multimodal benchmarks, validating discrete diffusion as a practical paradigm for unified omnimodal intelligence.
             </p>
           </div>
 
@@ -330,7 +330,7 @@
             <figure class="method__figure">
               <!-- Replace src with your website path, e.g., ./assets/Fig_main_arch.png -->
               <img
-                src="./assets/Fig_main_arch.png"
+                src="./Fig_main_arch.png"
                 alt="Dynin-Omni main architecture: unified training with tokenizers and discrete diffusion inference for text, image, and speech."
                 loading="lazy"
               />
@@ -353,14 +353,10 @@
             <figure class="method__figure">
               <!-- Replace src with your website path, e.g., ./assets/Fig_stage.png -->
               <img
-                src="./assets/Fig_stage.png"
+                src="./Fig_stage.png"
                 alt="Three-stage training pipeline highlighting model merging between modality adaptation and omnimodal SFT."
                 loading="lazy"
               />
-              <figcaption>
-                <strong>Figure.</strong> Training stages for Dynin-Omni. We highlight <strong>Model Merging</strong> as the bridge from modality
-                adaptation to native omnimodal unification, preserving backbone knowledge while enabling stable combined training.
-              </figcaption>
             </figure>
 
             <h3 class="method__title">Inference: Modality-Aware Parallel Decoding</h3>
