@@ -40,6 +40,26 @@
         section {
             margin-bottom: 20px;
         }
+        .news-section {
+            width: 88%;
+            max-width: 680px;
+            margin: 0 auto 30px;
+            text-align: left;
+        }
+        .news-section h2 {
+            text-align: center;
+        }
+        .news-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .news-section li {
+            margin-bottom: 8px;
+        }
+        .news-date {
+            font-weight: bold;
+        }
         .content-with-media {
             display: flex;
             align-items: flex-start;
@@ -121,6 +141,14 @@
         </ul>
     </nav>
     <main>
+        <section id="news" class="news-section">
+            <h2>News</h2>
+            <ul>
+                <li><span class="news-date">[Mar. 20, 2026]</span> Our team achieved 3rd place in the PVUW MeViS-Audio Track at CVPR 2026.</li>
+                <li><span class="news-date">[Mar. 9, 2026]</span> <i>Dynin-Omni</i>, where I contributed to the video understanding component, was announced.</li>
+                <li><span class="news-date">[Feb. 23, 2026]</span> One of my first-authored papers was accepted to CVPR 2026.</li>
+            </ul>
+        </section>
         <section id="introduction">
             <h2>Introduction</h2>
             <p>I am a student researching computer vision and machine learning at <a href="https://en.snu.ac.kr/index.html">Seoul National University</a>, in the Department of Electrical and Computer Engineering.</p>
@@ -199,6 +227,19 @@
 
         <section id="awards" class="awards-section">
             <h2>Awards & Honors</h2>
+
+            <div class="content-with-media">
+                <img src="assets/awards/26-mevis-a.png" alt="MeViS-Audio Track">
+                <div class="award-item">
+                    <div>
+                        <p class="award-title">3rd Place, 5th PVUW Challenge MeViS-Audio Track at CVPR 2026</p>
+                        <p>CVPR 2026 Pixel-level Video Understanding in-the-Wild (PVUW) Workshop</p>
+                        <p><i>3rd Place of MeViS-Audio Track of the 5th PVUW: VIRST-Audio</i>
+                        <p>[Github] [Technical Report]</p>
+                    </div>
+                    <div class="date">2026</div>
+                </div>
+            </div>
             
             <div class="content-with-media">
                 <img src="assets/awards/vf-vars.png" alt="vf-vars_img">
