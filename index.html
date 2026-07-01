@@ -78,6 +78,11 @@
             box-sizing: border-box;
             flex-shrink: 0;
         }
+        .publication-video-portrait {
+            aspect-ratio: 9 / 16;
+            height: auto;
+            margin-right: 20px;
+        }
         .award-item {
             flex: 1;
             display: flex;
@@ -199,7 +204,9 @@
                 </div>
             
                 <div class="content-with-media">
-                    <img src="assets/publications/virst.png" alt="Publication Image" class="publication-image">
+                    <video class="publication-image publication-video-portrait" autoplay muted loop playsinline poster="assets/publications/virst.png" aria-label="Publication Image">
+                        <source src="assets/publications/virst-qualitative.mp4" type="video/mp4">
+                    </video>
                     <div class="publication-item">
                         <div>
                             <p class="publication-title">VIRST: Video-Instructed Reasoning assistant for SpatioTemporal Segmentation</p>
