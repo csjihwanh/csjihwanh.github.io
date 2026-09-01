@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.75in]{geometry}
+\usepackage{fontspec}
+\setmainfont{SourceSerif4-Regular.ttf}[
+  Path=fonts/source-serif-4/,
+  BoldFont=SourceSerif4-Bold.ttf,
+  ItalicFont=SourceSerif4-It.ttf,
+  BoldItalicFont=SourceSerif4-BoldIt.ttf
+]
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{tabularx}
+\usepackage{array}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.35em}
+\setlist[itemize]{leftmargin=1.15em,itemsep=0.2em,topsep=0.2em}
+\hypersetup{hidelinks}
+
+\titleformat{\section}
+  {\Large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\vspace{-0.7em}\rule{\textwidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{0.5em}{0.35em}
+
+\newcommand{\entry}[3]{%
+  \noindent\textbf{#1}\hfill#2\par
+  \vspace{-0.2em}
+  \textit{#3}\par
+  \vspace{0.75em}
+}
+
+\newcommand{\pub}[5]{%
+  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \vspace{-0.2em}
+  \textit{#3}\par
+  \vspace{0.15em}
+  \small #4\par
+  \vspace{0.15em}
+  \small #5\par
+  \vspace{0.8em}
+}
+
+\newcommand{\award}[3]{%
+  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \vspace{-0.1em}
+  {\small\textit{#3}\par}
+  \vspace{0.65em}
+}
+
+\newcommand{\awardproduct}[4]{%
+  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \vspace{-0.1em}
+  {\small\textit{#3}\par}
+  \vspace{0.05em}
+  {\small #4\par}
+  \vspace{0.65em}
+}
+
+\newcommand{\awardproductlink}[5]{%
+  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \vspace{-0.1em}
+  {\small\textit{#3}\par}
+  \vspace{0.05em}
+  {\small #4\par}
+  \vspace{0.05em}
+  {\small #5\par}
+  \vspace{0.65em}
+}
+
+\newcommand{\awardproductauthors}[6]{%
+  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \vspace{-0.1em}
+  {\small\textit{#3}\par}
+  \vspace{0.05em}
+  {\small #4\par}
+  \vspace{0.05em}
+  {\small #5\par}
+  \vspace{0.05em}
+  {\small #6\par}
+  \vspace{0.65em}
+}
+
+\newcommand{\awardproject}[5]{%
+  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \vspace{-0.1em}
+  {\small\textit{#3}\par}
+  \vspace{0.05em}
+  {\small #4\par}
+  \vspace{0.05em}
+  {\small #5\par}
+  \vspace{0.65em}
+}
+
+\newcommand{\project}[4]{%
+  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \vspace{-0.2em}
+  \textit{#3}\par
+  \vspace{0.1em}
+  \small #4\par
+  \vspace{0.8em}
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{24}{28}\selectfont\bfseries Jihwan Hong}\\[4pt]
+  {\small csjihwanh@snu.ac.kr $\;\cdot\;$ \href{https://scholar.google.com/citations?hl=en&user=ieIfiSsAAAAJ}{Google Scholar} $\;\cdot\;$ \href{https://csjihwanh.com}{csjihwanh.com}}
+\end{center}
+
+\vspace{0.35em}
+
+\section*{Education}
+\entry{Seoul National University}{2025 -- Present}{M.S. in Electrical and Computer Engineering}
+\entry{Korea University}{2019 -- 2025}{B.S. in Computer Science and Engineering}
+
+\section*{Research Experience}
+\entry{Research Assistant, \href{https://aidas.snu.ac.kr/}{AIDAS Lab}, \href{https://en.snu.ac.kr/index.html}{Seoul National University}, Korea}{Aug. 2025 -- Present}{Advisor: Prof. Jaeyoung Do}
+\entry{Research Intern, \href{https://aidas.snu.ac.kr/}{AIDAS Lab}, \href{https://en.snu.ac.kr/index.html}{Seoul National University}, Korea}{Jan. 2025 -- Aug. 2025}{Advisor: Prof. Jaeyoung Do}
+\entry{Research Intern, MLV Lab, Korea University}{Jun 2023 -- Dec 2024}{Advisor: Prof. Hyunwoo J. Kim}
+\entry{Research Intern, AI Lab, Korea University}{Oct 2020 -- Jan 2021}{Advisor: Prof. Dongsuk Yook}
+
+\section*{Publications}
+\pub{DM3SR: Benchmarking Deep Multi-View 3D Spatial Reasoning}{2026}{Under review}{Jusang Oh, \textbf{Jihwan Hong}, Jaeyoung Do$^{\dagger}$}{}
+
+\pub{Predicting Nothing Beats SAM 3: Revisiting Evaluation in Video Object Segmentation}{2026}{Under review}{\textbf{Jihwan Hong}, Woohyeon Park, Jaeik Kim, Jaeyoung Do$^{\dagger}$}{}
+
+\pub{Dynin-Omni: Omnimodal Unified Large Diffusion Language Model}{2026}{Under review}{Jaeik Kim, Woojin Kim, \textbf{Jihwan Hong}, Yejoon Lee, Sieun Hyeon, Mintaek Lim, Yunseok Han, Dogeun Kim, Hoeun Lee, Hyunggeun Kim, Jaeyoung Do$^{\dagger}$}{\href{https://huggingface.co/spaces/AIDAS-Lab/Dynin-Omni}{Demo} $\cdot$ \href{https://github.com/AIDASLab/Dynin-Omni}{Code} $\cdot$ \href{https://huggingface.co/snu-aidas/Dynin-Omni}{Model} $\cdot$ \href{https://arxiv.org/abs/2604.00007}{arXiv}}
+
+\pub{VIRST: Video-Instructed Reasoning Assistant for SpatioTemporal Segmentation}{2026}{IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)}{\textbf{Jihwan Hong}, Jaeyoung Do$^{\dagger}$}{\href{https://aidaslab.github.io/VIRST/}{Project} $\cdot$ \href{https://openaccess.thecvf.com/content/CVPR2026/html/Hong_VIRST_Video-Instructed_Reasoning_Assistant_for_SpatioTemporal_Segmentation_CVPR_2026_paper.html}{Paper} $\cdot$ \href{https://arxiv.org/abs/2603.27060}{arXiv} $\cdot$ \href{https://github.com/AIDASLab/VIRST}{Code}}
+
+\newpage
+
+\pub{{\small Report of the 5th PVUW Challenge: Towards More Diverse Modalities in Pixel-Level Understanding}}{2026}{IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)}{Chang Liu \textit{et al.}}{\href{https://arxiv.org/abs/2604.26031}{arXiv}}
+
+\pub{SoccerNet 2024 Challenges Results}{2024}{arXiv preprint}{Anthony Cioppa \textit{et al.}}{\href{https://arxiv.org/abs/2409.10587}{arXiv}}
+
+\section*{Awards \& Honors}
+\awardproductauthors{3rd Place, 5th PVUW Challenge MeViS-Audio Track}{2026}{CVPR 2026 Pixel-level Video Understanding in-the-Wild (PVUW) Workshop}{3rd Place of MeViS-Audio Track of the 5th PVUW: VIRST-Audio}{\textbf{Jihwan Hong}, Jaeyoung Do$^{\dagger}$}{\href{https://arxiv.org/abs/2603.23126}{arXiv}}
+\awardproductauthors{2nd Place, CVPRW 2024 SoccerNet Challenge: Multi-View Foul Recognition}{2024}{CVPR 2024 CVsports Workshop}{VF-VARS: Leveraging Video Foundation Models for Video Assistant Referee Systems}{\textbf{Jihwan Hong}$^{*}$, Youngseo Kim$^{*}$, Junseok Lee, Jimin Lee, Sehyung Kim, Hyunwoo J. Kim$^{\dagger}$}{\href{https://docs.google.com/gview?url=https\%3A\%2F\%2Fgithub.com\%2Fuser-attachments\%2Ffiles\%2F16122185\%2FVF_VARS_v3.pdf\&embedded=1}{Technical Report}}
+\awardproject{1st Place, The 14th KSME Student Creative Design Competition}{2023}{The Korean Society of Mechanical Engineers; Minister of Science and ICT Award, Government of South Korea}{Development of an AI-Based Automatic Seat Belt Adjustment Device}{\href{https://github.com/csjihwanh/2023mech}{Code}}
+
+\section*{Selected Projects}
+\project{Anatomy- and Action-Conditioned Colonoscopic World Model}{Jul. 2026 -- Present}{SNU Boramae Medical Center \& NVIDIA HK}{Developing a colonoscopic I2V world model conditioned on an anatomical topology map and actions.}
+\project{Technical Drawing Registration Automation}{Apr. 2025 -- Jun. 2025}{POSCO DX}{Developed a vision-language-model-based workflow for autonomous technical drawing registration.}
+
+\end{document}
