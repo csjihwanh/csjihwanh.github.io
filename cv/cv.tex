@@ -29,82 +29,82 @@
   [\vspace{-0.7em}\rule{\textwidth}{0.4pt}]
 \titlespacing*{\section}{0pt}{0.5em}{0.35em}
 
+% Shared vertical rhythm for all entry macros.
+\newcommand{\entrygap}{0.8em}   % between entries
+\newcommand{\linegap}{0.1em}    % between lines inside one entry
+
+% Emits a line only when the argument is non-empty.
+\newcommand{\optline}[1]{%
+  \if\relax\detokenize{#1}\relax\else
+    \vspace{\linegap}{\small #1\par}%
+  \fi
+}
+
 \newcommand{\entry}[3]{%
   \noindent\textbf{#1}\hfill#2\par
   \vspace{-0.2em}
-  \textit{#3}\par
-  \vspace{0.75em}
+  {\normalsize\textit{#3}\par}
+  \vspace{\entrygap}
 }
 
 \newcommand{\pub}[5]{%
-  \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
+  \noindent\parbox[t]{0.87\textwidth}{\raggedright\textbf{\normalsize #1}}\hfill{\normalsize #2}\par
   \vspace{-0.2em}
-  \textit{#3}\par
-  \vspace{0.15em}
-  \small #4\par
-  \vspace{0.15em}
-  \small #5\par
-  \vspace{0.8em}
+  {\small\textit{#3}\par}
+  \optline{#4}%
+  \optline{#5}%
+  \vspace{\entrygap}
 }
 
 \newcommand{\award}[3]{%
   \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
-  \vspace{-0.1em}
+  \vspace{-0.2em}
   {\small\textit{#3}\par}
-  \vspace{0.65em}
+  \vspace{\entrygap}
 }
 
 \newcommand{\awardproduct}[4]{%
   \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
-  \vspace{-0.1em}
+  \vspace{-0.2em}
   {\small\textit{#3}\par}
-  \vspace{0.05em}
-  {\small #4\par}
-  \vspace{0.65em}
+  \optline{#4}%
+  \vspace{\entrygap}
 }
 
 \newcommand{\awardproductlink}[5]{%
   \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
-  \vspace{-0.1em}
+  \vspace{-0.2em}
   {\small\textit{#3}\par}
-  \vspace{0.05em}
-  {\small #4\par}
-  \vspace{0.05em}
-  {\small #5\par}
-  \vspace{0.65em}
+  \optline{#4}%
+  \optline{#5}%
+  \vspace{\entrygap}
 }
 
 \newcommand{\awardproductauthors}[6]{%
   \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
-  \vspace{-0.1em}
+  \vspace{-0.2em}
   {\small\textit{#3}\par}
-  \vspace{0.05em}
-  {\small #4\par}
-  \vspace{0.05em}
-  {\small #5\par}
-  \vspace{0.05em}
-  {\small #6\par}
-  \vspace{0.65em}
+  \optline{#4}%
+  \optline{#5}%
+  \optline{#6}%
+  \vspace{\entrygap}
 }
 
 \newcommand{\awardproject}[5]{%
   \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
-  \vspace{-0.1em}
+  \vspace{-0.2em}
   {\small\textit{#3}\par}
-  \vspace{0.05em}
-  {\small #4\par}
-  \vspace{0.05em}
-  {\small #5\par}
-  \vspace{0.65em}
+  \optline{#4}%
+  \optline{#5}%
+  \vspace{\entrygap}
 }
 
 \newcommand{\project}[4]{%
   \noindent\textbf{\normalsize #1}\hfill{\normalsize #2}\par
   \vspace{-0.2em}
-  \textit{#3}\par
-  \vspace{0.1em}
-  \small #4\par
-  \vspace{0.8em}
+  {\small\textit{#3}\par}
+  \optline{#4}%
+  \vspace{\entrygap}
 }
 
 \begin{document}
@@ -117,14 +117,14 @@
 \vspace{0.35em}
 
 \section*{Education}
-\entry{Seoul National University}{2025 -- Present}{M.S. in Electrical and Computer Engineering}
+\entry{Seoul National University}{2025 -- Present}{M.S. in Artificial Intelligence}
 \entry{Korea University}{2019 -- 2025}{B.S. in Computer Science and Engineering}
 
 \section*{Research Experience}
 \entry{Research Assistant, \href{https://aidas.snu.ac.kr/}{AIDAS Lab}, \href{https://en.snu.ac.kr/index.html}{Seoul National University}, Korea}{Aug. 2025 -- Present}{Advisor: Prof. Jaeyoung Do}
 \entry{Research Intern, \href{https://aidas.snu.ac.kr/}{AIDAS Lab}, \href{https://en.snu.ac.kr/index.html}{Seoul National University}, Korea}{Jan. 2025 -- Aug. 2025}{Advisor: Prof. Jaeyoung Do}
-\entry{Research Intern, MLV Lab, Korea University}{Jun 2023 -- Dec 2024}{Advisor: Prof. Hyunwoo J. Kim}
-\entry{Research Intern, AI Lab, Korea University}{Oct 2020 -- Jan 2021}{Advisor: Prof. Dongsuk Yook}
+\entry{Research Intern, \href{https://mlv.korea.ac.kr/}{MLV Lab}, \href{https://www.korea.ac.kr/}{Korea University}}{Jun. 2023 -- Dec. 2024}{Advisor: Prof. Hyunwoo J. Kim}
+\entry{Research Intern, AI Lab, \href{https://www.korea.ac.kr/}{Korea University}}{Oct. 2020 -- Jan. 2021}{Advisor: Prof. Dongsuk Yook}
 
 \section*{Publications}
 \pub{DM3SR: Benchmarking Deep Multi-View 3D Spatial Reasoning}{2026}{Under review}{Jusang Oh, \textbf{Jihwan Hong}, Jaeyoung Do$^{\dagger}$}{}
@@ -137,7 +137,7 @@
 
 \newpage
 
-\pub{{\small Report of the 5th PVUW Challenge: Towards More Diverse Modalities in Pixel-Level Understanding}}{2026}{IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)}{Chang Liu \textit{et al.}}{\href{https://arxiv.org/abs/2604.26031}{arXiv}}
+\pub{Report of the 5th PVUW Challenge: Towards More Diverse Modalities in Pixel-Level Understanding}{2026}{IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops (CVPRW)}{Chang Liu \textit{et al.}}{\href{https://arxiv.org/abs/2604.26031}{arXiv}}
 
 \pub{SoccerNet 2024 Challenges Results}{2024}{arXiv preprint}{Anthony Cioppa \textit{et al.}}{\href{https://arxiv.org/abs/2409.10587}{arXiv}}
 
