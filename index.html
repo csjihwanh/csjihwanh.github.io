@@ -91,6 +91,39 @@
             height: auto;
             margin-right: 20px;
         }
+        #publications details > summary {
+            color: #777;
+        }
+        #publications details[open] > summary {
+            color: #000;
+        }
+        .jnf-figure {
+            flex: 0 0 150px;
+            margin: 16px 20px 0 0;
+            color: #0073e6;
+            font-size: 0.85em;
+            text-align: center;
+        }
+        .content-with-media .jnf-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 0 0 4px;
+        }
+        @media (max-width: 700px) {
+            .jnf-publication {
+                flex-direction: column;
+            }
+            .jnf-figure {
+                flex: none;
+                width: 100%;
+                max-width: 150px;
+                margin: 0 auto 12px;
+            }
+            .jnf-publication .publication-item {
+                width: 100%;
+            }
+        }
         .award-item {
             flex: 1;
             display: flex;
@@ -153,7 +186,6 @@
             <li><a href="#publications">Publications</a></li>
             <li><a href="#awards">Awards</a></li>
             <li><a href="#service">Service</a></li>
-            <li><a href="#presentations">Presentations</a></li>
             <li><a href="#patents">Patents</a></li>
             <li><a href="#language">Language</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -163,9 +195,10 @@
         <section id="news" class="news-section">
             <h2>News</h2>
             <ul>
+                <li><span class="news-date">[Sep. 26, 2026]</span> My first-authored paper was accepted to NeurIPS 2026.</li>
                 <li><span class="news-date">[Mar. 20, 2026]</span> Our team achieved 3rd place in the PVUW MeViS-Audio Track at CVPR 2026.</li>
                 <li><span class="news-date">[Mar. 9, 2026]</span> <i>Dynin-Omni</i>, where I contributed to the video understanding component, was announced.</li>
-                <li><span class="news-date">[Feb. 23, 2026]</span> One of my first-authored papers was accepted to CVPR 2026.</li>
+                <li><span class="news-date">[Feb. 23, 2026]</span> My first-authored paper was accepted to CVPR 2026.</li>
             </ul>
         </section>
         <section id="introduction">
@@ -176,7 +209,7 @@
         <section id="education">
             <h2>Education</h2>
             <ul>
-                <li>M.S–Ph.D. in Artificial Intelligence (Interdisciplinary Program), Seoul National University (2025 – Present)</li>
+                <li>M.S. in Artificial Intelligence (Interdisciplinary Program), Seoul National University (2025 – Present)</li>
                 <li>B.S. in Computer Science and Engineering, Korea University (2019 – 2025)</li>
             </ul>
         </section>
@@ -203,7 +236,27 @@
         </section>
         <section id="publications">
             <h2>Publications</h2>
-            
+
+                <div class="content-with-media jnf-publication">
+                    <div class="jnf-figure">
+                        <img src="assets/publications/jnf-web.svg" alt="Video example: SAM 3 scores 77.5 mean J&amp;F; Predict Nothing scores 82.8.">
+                    </div>
+                    <div class="publication-item">
+                        <div>
+                            <p class="publication-title">When Predicting Nothing Beats SAM 3: Revisiting Evaluation in Video Object Segmentation</p>
+                            <p><strong>Jihwan Hong</strong>, Woohyeon Park, Jaeik Kim, Jaeyoung Do<sup>&dagger;</sup></p>
+                            <p><i>40th Annual Conference on Neural Information Processing Systems (<b>NeurIPS</b>), Evaluations and Datasets Track</i>, 2026.</p>
+                            <p>[Paper (coming soon)]</p>
+                            <details>
+                                <summary aria-label="TL;DR for When Predicting Nothing Beats SAM 3">TL;DR</summary>
+                                <p>We identify a critical flaw in frame-wise J&amp;F, the standard evaluation metric for video object segmentation: when target objects are rarely visible, predicting empty masks can outperform strong models such as SAM 3.<br>
+                                We introduce FaVOS to systematically evaluate this failure and propose volumetric J&amp;F to address it.</p>
+                            </details>
+                        </div>
+                        <div class="date">2026</div>
+                    </div>
+                </div>
+
                 <div class="content-with-media">
                     <img src="assets/publications/dynin-omni.png" alt="Publication Image" class="publication-image">
                     <div class="publication-item">
@@ -212,11 +265,16 @@
                             <p>Jaeik Kim, Woojin Kim, <strong>Jihwan Hong</strong>, Yejoon Lee, Sieun Hyeon, Mintaek Lim, Yunseok Han, Dogeun Kim, Hoeun Lee, Hyunggeun Kim, Jaeyoung Do<sup>&dagger;</sup></p>
                             <p><i>arXiv preprint, arXiv:2604.00007, 2026.</i></p>
                             <p><a href="https://dynin.ai/omni/">[Project]</a> <a href="https://arxiv.org/abs/2604.00007">[arXiv]</a> <a href="https://github.com/AIDASLab/Dynin-Omni">[Code]</a></p>
+                            <details>
+                                <summary aria-label="TL;DR for Dynin-Omni">TL;DR</summary>
+                                <p>Dynin-Omni is an omnimodal discrete diffusion foundation model that unifies text, image, video, and speech understanding and generation through iterative refinement and bidirectional token modeling.</p>
+                                <p><strong>My role:</strong> I extended MMaDA's image understanding module to video, designing the architecture and training recipe for video understanding and video-to-speech generation.</p>
+                            </details>
                         </div>
                         <div class="date">2026</div>
                     </div>
                 </div>
-            
+
                 <div class="content-with-media">
                     <video class="publication-image publication-video-portrait" autoplay muted loop playsinline poster="assets/publications/virst.png" aria-label="Publication Image">
                         <source src="assets/publications/virst-qualitative.mp4" type="video/mp4">
@@ -226,7 +284,12 @@
                             <p class="publication-title">VIRST: Video-Instructed Reasoning assistant for SpatioTemporal Segmentation</p>
                             <p><strong>Jihwan Hong</strong>, Jaeyoung Do&dagger;</p>
                             <p><i>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (<b>CVPR</b>)</i>, 2026.</p>
-                            <p><a href="https://aidaslab.github.io/VIRST/">[Project]</a> <a href="https://cvpr.thecvf.com/virtual/2026/poster/37856">[paper]</a> <a href="https://arxiv.org/abs/2603.27060">[arXiv]</a> <a href="https://github.com/AIDASLab/VIRST">[Code]</a></p>
+                            <p><a href="https://aidaslab.github.io/VIRST/">[Project]</a> <a href="https://cvpr.thecvf.com/virtual/2026/poster/37856">[Paper]</a> <a href="https://arxiv.org/abs/2603.27060">[arXiv]</a> <a href="https://github.com/AIDASLab/VIRST">[Code]</a></p>
+                            <details>
+                                <summary aria-label="TL;DR for VIRST">TL;DR</summary>
+                                <p>VIRST performs referring video object segmentation (RVOS), identifying and segmenting a target object throughout a video based on a text description.<br>
+                                By fusing visual features from the segmentation encoder and semantically aligned features into learnable tokens, alongside multiple anchor frames updated as the video progresses, VIRST achieves state-of-the-art results on all four evaluated RVOS benchmarks.</p>
+                            </details>
                         </div>
                         <div class="date">2026</div>
                     </div>
@@ -251,7 +314,7 @@
                         <div>
                             <p class="publication-title">SoccerNet 2024 Challenges Results</p>
                             <p>Anthony Cioppa et al.</p>
-                            <p><i>arXiv preprint</i>, arXiv:2409.10587, 2024.</p> 
+                            <p><i>arXiv preprint</i>, arXiv:2409.10587, 2024.</p>
                             <p><a href="https://arxiv.org/abs/2409.10587">[arXiv]</a></p>
                         </div>
                         <div class="date">2024</div>
@@ -274,7 +337,7 @@
                     <div class="date">2026</div>
                 </div>
             </div>
-            
+
             <div class="content-with-media">
                 <img src="assets/awards/vf-vars.png" alt="vf-vars_img">
                 <div class="award-item">
@@ -351,21 +414,7 @@
             </div>
         </section>
 
-        <section id="presentations">
-            <h2>Academic Presentations</h2>
-            <div class="content-with-media">
-                <img src="assets/etc/transparent.png" alt="Presentation Image">
-                <div class="award-item">
-                    <div>
-                        <p class="award-title">Video Foundation Model을 이용한 자동 축구 영상 판독 시스템 </p>
-                        <p><i>Conference on Electronics, Semiconductor, and AI 전자·반도체·인공지능 학술대회</i></p>
-                        <p><a href="https://www.theieie.org/eng/">The Institute of Electronics and Information Engineers</a> <a href="https://www.theieie.org">대한전자공학회</a></p>
-                        <!-- <p>Aug. 8</p> -->
-                    </div>
-                    <div class="date">2024</div>
-                </div>
-            </div>
-        </section>
+
 
         <section id="patents">
             <h2>Patents</h2>
@@ -373,7 +422,7 @@
                 <li>To be added</li>
             </ul>
         </section>
-        
+
         <section id="language">
             <h2>Language</h2>
             <ul>
@@ -385,7 +434,7 @@
                 <li>English
                     <ul>
                         <li>Advanced</li>
-                        <li>TOEFL: 98 (<a href="https://www.ets.org/toefl/institutions/ibt/compare-scores.html#accordion-ff2afbe1ab-item-95a6512adf">CEFR level: C1</a>) </li>
+                        <li>TOEFL: 5.0 (<a href="https://www.ets.org/toefl/institutions/ibt/compare-scores.html#accordion-ff2afbe1ab-item-95a6512adf">CEFR level: C1</a>) </li>
                     </ul>
                 </li>
                 <li>Chinese
