@@ -97,6 +97,12 @@
         #publications details[open] > summary {
             color: #000;
         }
+        .content-with-media .paper-full-figure {
+            display: block;
+            width: 100%;
+            height: auto;
+            margin: 12px 0 0;
+        }
         .jnf-figure {
             flex: 0 0 150px;
             margin: 16px 20px 0 0;
@@ -204,7 +210,7 @@
         <section id="introduction">
             <h2>Introduction</h2>
             <p>I am a student researching computer vision and machine learning at <a href="https://en.snu.ac.kr/index.html">Seoul National University</a>, in the Interdisciplinary Program in Artificial Intelligence.</p>
-            <p>I am currently interested in computer vision, especially video understanding, video generation, and 3D perception.</p>
+            <p>My goal is to build systems that represent, understand, and generate complex visual worlds, and use these capabilities to solve real-world problems.</p>
         </section>
         <section id="education">
             <h2>Education</h2>
@@ -251,6 +257,7 @@
                                 <summary aria-label="TL;DR for When Predicting Nothing Beats SAM 3">TL;DR</summary>
                                 <p>We identify a critical flaw in frame-wise J&amp;F, the standard evaluation metric for video object segmentation: when target objects are rarely visible, predicting empty masks can outperform strong models such as SAM 3.<br>
                                 We introduce FaVOS to systematically evaluate this failure and propose volumetric J&amp;F to address it.</p>
+                                <img class="paper-full-figure" src="assets/publications/jnf.png" alt="Full figure comparing ground-truth video frames, Predict Nothing and SAM 3 masks and scores, explaining absence bias, and showing results on FaVOS-20." loading="lazy">
                             </details>
                         </div>
                         <div class="date">2026</div>
