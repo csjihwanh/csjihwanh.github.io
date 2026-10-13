@@ -110,7 +110,7 @@
             font-size: 0.85em;
             text-align: center;
         }
-        .content-with-media .jnf-figure img {
+        .content-with-media .jnf-figure video {
             display: block;
             width: 100%;
             height: auto;
@@ -245,7 +245,10 @@
 
                 <div class="content-with-media jnf-publication">
                     <div class="jnf-figure">
-                        <img src="assets/publications/jnf-web.svg" alt="Video example: SAM 3 scores 77.5 mean J&amp;F; Predict Nothing scores 82.8.">
+                        <video autoplay muted loop playsinline preload="metadata" aria-label="When Predicting Nothing Beats SAM 3: video demonstration">
+                            <source src="assets/publications/jnf-thumbnail.webm" type="video/webm">
+                            <source src="assets/publications/jnf-thumbnail.mp4" type="video/mp4">
+                        </video>
                     </div>
                     <div class="publication-item">
                         <div>
