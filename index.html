@@ -124,16 +124,22 @@
             margin: 0 0 4px;
         }
         @media (max-width: 700px) {
-            .jnf-publication {
+            #publications .content-with-media {
                 flex-direction: column;
             }
-            .jnf-figure {
+            #publications .content-with-media > img,
+            #publications .content-with-media > video,
+            #publications .jnf-figure {
                 flex: none;
                 width: 100%;
-                max-width: 150px;
+                max-width: 180px;
+                height: auto;
                 margin: 0 auto 12px;
             }
-            .jnf-publication .publication-item {
+            #publications .content-with-media > img[src$="transparent.png"] {
+                display: none;
+            }
+            #publications .publication-item {
                 width: 100%;
             }
         }
